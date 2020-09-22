@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #00458a; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #00458a !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #00458a;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #00458a;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #00458a !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">FEIT Southern UC</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Obbjectives</a></li>
+        <li><a href="#services">Department</a></li>
+        <li><a href="#portfolio">Members</a></li>
+        <li><a href="#pricing">Faculty</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <div class="jumbotron text-center"> -->
+<!--   <h1>Company</h1> 
+  <p>We specialize in blablabla</p>  -->
+  <!-- <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form> -->
+<!-- </div> -->
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid " >
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-sm-4">
+      <img class="img-fluid" style="width: 90%;" src="https://scontent.fmkz1-1.fna.fbcdn.net/v/t1.0-9/100946444_124124705959187_1611192419146006528_n.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=CpAYnHqa8K8AX_M2cLP&_nc_ht=scontent.fmkz1-1.fna&oh=4e481ca0890feace4e96d5cb5a962908&oe=5F8DE715" >
+    </div>
+    <div class="col-sm-8" align="justify">
+      <h2>Faculty Introduction</h2>
+      <!-- <h4>The faculty of Engineering and Information Technology (FEIT) is a faculty within the Southern University College (Southern UC). It was established on August 12, 2012 after Southern College (SC) was upgraded to Southern UC. The history reaches back to two decades ago, when the Department of Computer Science was first established in 1991, followed by the Department of Electrical and Electronics Engineering in 2004. These two departments were then integrated and renamed as the School of Engineering and Information Technology (SEIT) in March 2006.</h4> -->
+      <p>The faculty of Engineering and Information Technology (FEIT) is a faculty within the Southern University College (Southern UC). It was established on August 12, 2012 after Southern College (SC) was upgraded to Southern UC. The history reaches back to two decades ago, when the Department of Computer Science was first established in 1991, followed by the Department of Electrical and Electronics Engineering in 2004. These two departments were then integrated and renamed as the School of Engineering and Information Technology (SEIT) in March 2006.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-7" align="justify">
+      <h2>OBJECTIVES</h2>
+      <h4>FEIT has set the following objectives in its establishment:</h4>
+      <p>1: To provide high-quality and all round education in engineering and information technology to produce competent engineers and IT professionals capable of dealing effectively with sophisticated engineering and IT problems.</p>
+
+      <p>2: Increase activities to promote innovation, commercialization and entrepreneurship in the field of software and electronics engineering development.</p>
+
+      <p>3: To help the country in achieving its goal as a developed country in 2020 in terms of the number of professionals in the fields of engineering and ICT.</p>
+    </div>
+    <div class="col-sm-4">
+    <br>
+      <img class="img-fluid" style="width: 100%;" src="https://b180279c.github.io/Final_BTIS3063/images/new1.jpg" >
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Department</h2>
+  <!-- <h4>What we offer</h4> -->
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-6">
+      <span style="color:#00458a;" class="fa fa-laptop fa-4x"></span>
+      <h4>Department <br> Of Computer Science</h4>
+      <!-- <p>Lorem ipsum dolor sit amet..</p> -->
+    </div>
+    <div class="col-sm-6">
+      <span style="color:#00458a;" class="fa fa-wrench fa-4x"></span>
+      <h4>Department <br> of Electrical &amp; Electronics Engineering</h4>
+      <!-- <p>Lorem ipsum dolor sit amet..</p> -->
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Faculty Dean &amp; Departments Head</h2><br>
+  <h4></h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://www.southern.edu.my/WCMS/directory/photo/20200217144131.jpg" alt="Paris" width="50%">
+        <p><strong>Assoc. Prof. Sim Hiew Moi</strong></p>
+        <p>Dean<br> Associate Professor <br> Department of Computer Science</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://www.southern.edu.my/WCMS/directory/photo/20200206134558.jpg" alt="New York" width="50%">
+        <p><strong>Asst. Prof. So Yong Quay</strong></p>
+        <p>Head <br> Department of Computer Science <br> Assistant Professor</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://www.southern.edu.my/WCMS/directory/photo/20200206133959.jpg" alt="San Francisco" width="50%" >
+        <p><strong>Chan Bun Seng</strong><p>Head <br>Department of Electrical &amp; Electronic <br> Engineering; Lecturer</p>
+      </div>
+    </div>
+  </div><br>
+  
+  
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Programme </h2>
+    <h4>What Programmes We Offer?</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Bachelor of Software Engineering (Hons)</h1>
+        </div>
+        <div class="panel-body" align="text-center">
+          <p><strong>Introduction</strong></p>
+          <p style="text-align:center;">Software Engineering is the application of a systematic, disciplined, quantifiable approach to the design, development, operation, and maintenance of software, and the study of these approaches; that is, the application of engineering to software.</p>
+        </div>
+        <div class="panel-footer">
+          <h3>3 years</h3>
+          <!-- <h4>per month</h4> -->
+          <button class="btn btn-lg">Details...</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Diploma in Information Technology</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Introduction</strong></p>
+          <p>Based on the information technology, business and industrial needs, the curriculums are designed to provide the student with the techniques and knowledge in the applications and process of Information technology, as well as to train the students to be excellent at data analysis and information management.</p>
+          
+        </div>
+        <div class="panel-footer">
+          <h3>2 years 4 months</h3>
+          <!-- <h4>per month</h4> -->
+          <button class="btn btn-lg">Details...</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Diploma in Computer Science</h1>
+        </div>
+        <div class="panel-body">
+          <p>Introduction</p>
+          <p>This course has been designed in response to the needs of the rapid development of the country and to support the growth and success of the Multimedia Super Corridor project introduced by the government. The design of the course curriculums not only emphasizes on the academic theories and the practical applications, but it also takes into considerations of the career prospect and future development of the students.</p>
+        </div>
+        <div class="panel-footer">
+          <h3>4 years</h3>
+          <!-- <h4>per month</h4> -->
+          <button class="btn btn-lg">Details...</button>
+        </div>
+      </div>      
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Bachelor of Electronic Engineering with Honours</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Introduction</strong></p>
+          <p>This course is designed for those who wish to broaden their knowledge in electronics engineering. It’s main objectives are to train students in the aspects of analysis and design, practical and project handling and problem solving skills. In doing so, we hope our graduates will be equipped with a solid foundation upon joining employment and with the necessary skills to meet the challenges in the fields of engineering today.</p>
+          
+        </div>
+        <div class="panel-footer">
+          <h3>2 years 4 months</h3>
+          <!-- <h4>per month</h4> -->
+          <button class="btn btn-lg">Details...</button>
+        </div>
+      </div>      
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Diploma in Electrical &amp; Electronic Engineering</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Introduction</strong></p>
+          <p>The diploma in Electrical and Electronics Engineering course covers a wide range of electrical and electronics engineering basic knowledge. It is to ensure that graduates have mastered the necessary skills required, knowledge and professionalism to meet the challenges in the broader electrical and electronic engineering industry. The main objective is to produce technically trained personnel who understand the electronic aspects of communication, computer, computer network, and automated systems. These technicians will play a key role in many aspects of today’s highly technical environment.</p>
+          
+        </div>
+        <div class="panel-footer">
+          <h3>2 years 4 months</h3>
+          <!-- <h4>per month</h4> -->
+          <button class="btn btn-lg">Details...</button>
+        </div>
+      </div>      
+    </div>      
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Skudai, Johor</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +07 5586605</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> feit@sc.edu.my</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Contact Number" type="email" required>
+        </div>
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Year of graduate" type="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Residential Area" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <p style="color:#00458a;">
+    <a href="https://www.facebook.com/FEITSouthernUC/" target="_blank"><span class="fa fa-facebook-square fa-2x"></span></a> &nbsp;|&nbsp;<a href="https://www.youtube.com/channel/UCNIdplceP7rm8nCmYGyBETQ" target="_blank"><span class="fa fa-youtube fa-2x"></span></a> &nbsp;|&nbsp;<a href="https://api.whatsapp.com/send?phone=60172962522&amp;text=Hi I would like to know more about Southern UC.'s courses." target="_blank"><span class="fa fa-whatsapp fa-2x"></span></a>
+  </p>
+  <a href="#myPage" title="To Top">
+    <span style="color:#00458a;" class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright ©2020 All rights reserved | SUC FEIT</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
